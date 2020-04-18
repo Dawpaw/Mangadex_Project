@@ -102,4 +102,7 @@ get_image(msoup)
 
 '''
 Encontrar forma de hacer que beutifulsoup saque todas las imagines que no fueron
-cargadas al no cargase Javascript'''
+cargadas al no cargase Javascript
+
+Activar html requests
+'''
