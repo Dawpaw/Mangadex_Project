@@ -83,7 +83,10 @@ def get_image(chapter_soup):
   '''
   Not Working
 
+<<<<<<< HEAD
   '''
+=======
+>>>>>>> 0fe8033df66527ac0465a5b7fd32c05c57c8093e
     # for first_div in  chapter_soup.find_all('img'):
     #     print(first_div.prettify())
 
