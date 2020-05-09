@@ -3,6 +3,10 @@ from requests_html import HTML, HTMLSession
 import os
 
 session = HTMLSession()
+cookies = {}
+headers = {'accept-language':'en,es-ES;q=0.9,es;q=0.8,de;q=0.7',
+            'accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+            'accept-encoding': 'gzip, deflate, br','server': 'ddos'}
 
 def getManga_Html():
     ''' Get the manga html '''
@@ -40,7 +44,7 @@ def chapterHtml(chapter_url):
         RENDER NOT WORKING
     '''
     try:
-        r =session.get(chapter_url).html
+        r =session.get(chapter_url, headers = headers).html
         r.render()
         print(r)
         return r
@@ -80,9 +84,9 @@ def get_image(chapter_soup):
     soup = chapter_soup.find('img[srs^="https://s2.mangadex.org/data"]')
     print(soup)
 
-  '''
-  Not Working
-  '''
+    '''
+    Not Working
+    '''
     # for first_div in  chapter_soup.find_all('img'):
     #     print(first_div.prettify())
 
